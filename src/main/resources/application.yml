@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
   batch:
     job:
-      enabled: true
+      enabled: false
     jdbc:
       initialize-schema: always
 
