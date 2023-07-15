@@ -1,4 +1,4 @@
-package com.example.batch.domain;
+package com.example.batch.domain.post;
 
 import lombok.*;
 

@@ -1,5 +1,7 @@
 package com.example.batch.domain;
 
+import com.example.batch.domain.post.Post;
+import com.example.batch.domain.post.PostRepositoryImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

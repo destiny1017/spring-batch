@@ -1,11 +1,10 @@
-package com.example.batch.domain;
+package com.example.batch.domain.roadtraffic.repository;
 
+import com.example.batch.domain.roadtraffic.RoadTraffic;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.PreparedStatement;
 import java.util.List;
 
 @RequiredArgsConstructor

@@ -1,4 +1,4 @@
-package com.example.batch.domain;
+package com.example.batch.domain.roadtraffic;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
