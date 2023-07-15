@@ -21,18 +21,23 @@ public class BatchConfig {
     private StepBuilderFactory stepBuilderFactory;
 
     @Bean
-    public Job job() {
+    public Job exampleJob() {
         return jobBuilderFactory.get("exampleJob")
-                .start(step())
+                .start(exampleStep())
                 .build();
     }
 
     @Bean
-    public Step step() {
-        return stepBuilderFactory.get("step")
+    public Step exampleStep() {
+        return stepBuilderFactory.get("exampleStep")
                 .tasklet(((contribution, chunkContext) -> {
                     log.info("Hello Batch !");
                     return RepeatStatus.FINISHED;
                 })).build();
+    }
+
+    @Bean
+    public Step serviceStep1() {
+        return null;
     }
 }

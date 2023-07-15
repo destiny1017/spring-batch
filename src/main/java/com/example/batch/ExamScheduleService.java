@@ -23,7 +23,7 @@ public class ExamScheduleService {
     private final JobLauncher jobLauncher;
     private final Job job;
 
-    @Scheduled(cron = "0/5 * * * * ?")
+    @Scheduled(cron = "0/30 * * * * ?")
     public void examSchedule() {
         Map<String, JobParameter> confMap = new HashMap<>();
         Date date = Calendar.getInstance().getTime();
