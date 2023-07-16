@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface RoadTrafficRepository {
     void save(RoadTraffic roadTraffic);
+    void saveAll(List<RoadTraffic> trafficAll);
     List<RoadTraffic> findAll();
 }

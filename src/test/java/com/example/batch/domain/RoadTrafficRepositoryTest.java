@@ -25,7 +25,7 @@ class RoadTrafficRepositoryTest {
                 .tmType("3")
                 .tmName("5분")
                 .carType("1")
-                .trafficAmount("4495")
+                .trafficAmout("4495")
                 .sumTm("1900")
                 .build();
 

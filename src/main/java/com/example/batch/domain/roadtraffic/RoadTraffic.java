@@ -1,12 +1,14 @@
 package com.example.batch.domain.roadtraffic;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
+
+import java.time.LocalDateTime;
 
 @Getter
+@Setter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class RoadTraffic {
     private String exDivCode;
     private String exDivName;
@@ -15,6 +17,7 @@ public class RoadTraffic {
     private String tmType;
     private String tmName;
     private String carType;
-    private String trafficAmount;
+    private String trafficAmout;
     private String sumTm;
+    private LocalDateTime createdDateTime;
 }
