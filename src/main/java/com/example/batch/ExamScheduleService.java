@@ -16,25 +16,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
-@Component
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class ExamScheduleService {
 
-    private final JobLauncher jobLauncher;
-    private final Job job;
-
-    @Scheduled(cron = "0/30 * * * * ?")
-    public void examSchedule() {
-        Map<String, JobParameter> confMap = new HashMap<>();
-        Date date = Calendar.getInstance().getTime();
-        confMap.put("time", new JobParameter(date));
-        JobParameters jobParameters = new JobParameters(confMap);
-
-        try {
-            jobLauncher.run(job, jobParameters);
-        } catch (Exception e) {
-            log.error("job schedule error time : ",
-                    new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date));
-        }
-    }
+//    private final JobLauncher jobLauncher;
+//    private final Job job;
+//
+//    @Scheduled(cron = "0/30 * * * * ?")
+//    public void examSchedule() {
+//        Map<String, JobParameter> confMap = new HashMap<>();
+//        Date date = Calendar.getInstance().getTime();
+//        confMap.put("time", new JobParameter(date));
+//        JobParameters jobParameters = new JobParameters(confMap);
+//
+//        try {
+//            jobLauncher.run(job, jobParameters);
+//        } catch (Exception e) {
+//            log.error("job schedule error time : ",
+//                    new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date));
+//        }
+//    }
 }
