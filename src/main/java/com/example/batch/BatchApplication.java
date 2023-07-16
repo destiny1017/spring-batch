@@ -3,13 +3,20 @@ package com.example.batch;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 
 @SpringBootApplication
 @EnableBatchProcessing
 @EnableScheduling
-public class BatchApplication {
+public class BatchApplication extends SpringBootServletInitializer {
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+		return builder.sources(BatchApplication.class);
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(BatchApplication.class, args);
