@@ -2,6 +2,7 @@ package com.example.batch.domain.roadtraffic.repository;
 
 import com.example.batch.domain.roadtraffic.RoadTraffic;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+@Slf4j
 @RequiredArgsConstructor
 @Repository
 public class RoadTrafficRepositoryImpl implements RoadTrafficRepository {

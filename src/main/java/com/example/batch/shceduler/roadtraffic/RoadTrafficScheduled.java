@@ -20,10 +20,10 @@ import java.util.Map;
 @Slf4j
 public class RoadTrafficScheduled {
 
-    private Job roadTrafficPullJob;
-    private JobLauncher jobLauncher;
+    private final Job roadTrafficPullJob;
+    private final JobLauncher jobLauncher;
 
-    @Scheduled(cron = "* 0/5 * * * *")
+    @Scheduled(cron = "0 0/5 * * * *")
     public void roadTrafficPullScheduled() {
         Map<String, JobParameter> confMap = new HashMap<>();
         Date date = Calendar.getInstance().getTime();
@@ -31,8 +31,10 @@ public class RoadTrafficScheduled {
         JobParameters jobParameters = new JobParameters(confMap);
 
         try {
+            log.info("roadTrafficPullScheduled.run");
             jobLauncher.run(roadTrafficPullJob, jobParameters);
         } catch (Exception e) {
+            e.printStackTrace();
             log.error("roadTrafficPullScheduled error time : ",
                     new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date));
         }

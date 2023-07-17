@@ -18,7 +18,7 @@ public class RoadTrafficJobConfig {
 
     @Bean
     public Job roadTrafficPullJob() {
-        return jobBuilderFactory.get("roadTrafficJob")
+        return jobBuilderFactory.get("roadTrafficPullJob")
                 .start(roadTrafficPullStep())
                 .build();
     }
