@@ -23,7 +23,7 @@ public class RoadTrafficServiceImpl implements RoadTrafficService {
    public void pullRoadTraffic() {
       log.info("RoadTrafficServiceImpl.pullRoadTraffic");
       TrafficAllVo trafficAll = webClient.get()
-              .uri("/openapi/trafficapi/trafficAll?key=test&type=json&tmType=3")
+              .uri("/openapi/trafficapi/trafficAll?key=test&type=json&exDivCode=00&tcsType=1&tmType=1")
               .retrieve()
               .bodyToMono(TrafficAllVo.class)
               .block();

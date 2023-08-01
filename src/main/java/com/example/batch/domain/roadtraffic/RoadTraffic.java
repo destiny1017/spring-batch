@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RoadTraffic {
+    private Long id;
     private String exDivCode;
     private String exDivName;
     private String tcsType;
